@@ -1,24 +1,21 @@
 package com.isced.expedientes.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "permissao")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name = "permissoes")
 public class Permissao {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String nome;
+    private String codigo;
 
-    @Column(nullable = false, unique = true)
-    private String nome; // Ex: "Criar Expediente"
-
-    @Column(nullable = false, unique = true)
-    private String codigo; // Ex: "EXP_CRIAR"
+    // Getters e Setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+    public String getCodigo() { return codigo; }
+    public void setCodigo(String codigo) { this.codigo = codigo; }
 }

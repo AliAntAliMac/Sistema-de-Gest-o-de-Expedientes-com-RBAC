@@ -1,36 +1,31 @@
 package com.isced.expedientes.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import java.util.List;
 
 @Entity
-@Table(name = "utilizador")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name = "utilizadores")
 public class Utilizador {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
     private String nome;
-
-    @Column(nullable = false, unique = true)
+    @Column(unique = true)
     private String email;
-
-    @Column(nullable = false)
     private String senha;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "utilizador_papel",
-            joinColumns = @JoinColumn(name = "utilizador_id"),
-            inverseJoinColumns = @JoinColumn(name = "papel_id")
-    )
-    private List<Papel> papeis;
+    @ManyToOne
+    @JoinColumn(name = "papel_id")
+    private Papel papel;
+
+    // Getters e Setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+    public String getSenha() { return senha; }
+    public void setSenha(String senha) { this.senha = senha; }
+    public Papel getPapel() { return papel; }
+    public void setPapel(Papel papel) { this.papel = papel; }
 }
