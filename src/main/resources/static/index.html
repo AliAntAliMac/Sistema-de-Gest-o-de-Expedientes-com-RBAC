@@ -1,31 +1,31 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <title>Gestão de Expedientes - SmartSpaces</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-<div id="loginSection" class="container">
+<div class="container" id="loginSection">
     <h1>Acesso ao Sistema</h1>
-    <input type="email" id="loginEmail" placeholder="E-mail">
-    <input type="password" id="loginSenha" placeholder="Senha">
+    <input id="loginEmail" placeholder="E-mail" type="email">
+    <input id="loginSenha" placeholder="Senha" type="password">
     <button onclick="fazerLogin()">Entrar</button>
     <p style="text-align: center;">Não tem conta? <a href="#" onclick="mostrarRegisto()">Criar conta</a></p>
     <p id="erroLogin" style="color: red; text-align: center;"></p>
 </div>
 
-<div id="registerSection" class="container" style="display: none;">
+<div class="container" id="registerSection" style="display: none;">
     <h1>Criar Nova Conta</h1>
-    <input type="text" id="regNome" placeholder="Nome Completo">
-    <input type="email" id="regEmail" placeholder="E-mail">
-    <input type="password" id="regSenha" placeholder="Senha">
+    <input id="regNome" placeholder="Nome Completo" type="text">
+    <input id="regEmail" placeholder="E-mail" type="email">
+    <input id="regSenha" placeholder="Senha" type="password">
     <button onclick="criarConta()">Registar</button>
     <p style="text-align: center;">Já tem conta? <a href="#" onclick="mostrarLogin()">Fazer Login</a></p>
     <p id="msgRegisto" style="text-align: center;"></p>
 </div>
 
-<div id="dashboardSection" class="container" style="display: none;">
+<div class="container" id="dashboardSection" style="display: none;">
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <h1>Expedientes</h1>
         <button onclick="logout()" style="width: 80px; background-color: #d9534f;">Sair</button>
@@ -33,9 +33,9 @@
     <p>Bem-vindo, <strong id="nomeUsuario"></strong> (<span id="papelUsuario"></span>)</p>
     <div class="form-section">
         <h2>Registar Novo Expediente</h2>
-        <input type="text" id="numeroProcesso" placeholder="Nº do Processo">
-        <input type="text" id="assunto" placeholder="Assunto">
-        <input type="text" id="remetente" placeholder="Remetente">
+        <input id="numeroProcesso" placeholder="Nº do Processo" type="text">
+        <input id="assunto" placeholder="Assunto" type="text">
+        <input id="remetente" placeholder="Remetente" type="text">
         <button onclick="salvarExpediente()">Registar</button>
     </div>
     <div class="list-section">

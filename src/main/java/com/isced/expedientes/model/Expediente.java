@@ -40,7 +40,6 @@
 //
 
 
-
 package com.isced.expedientes.model;
 
 import jakarta.persistence.*;
@@ -67,18 +66,59 @@ public class Expediente {
     private Utilizador criador;
 
     // Getters e Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public String getNumeroProcesso() { return numeroProcesso; }
-    public void setNumeroProcesso(String numeroProcesso) { this.numeroProcesso = numeroProcesso; }
-    public String getAssunto() { return assunto; }
-    public void setAssunto(String assunto) { this.assunto = assunto; }
-    public String getRemetente() { return remetente; }
-    public void setRemetente(String remetente) { this.remetente = remetente; }
-    public LocalDateTime getDataRegisto() { return dataRegisto; }
-    public void setDataRegisto(LocalDateTime dataRegisto) { this.dataRegisto = dataRegisto; }
-    public String getEstado() { return estado; }
-    public void setEstado(String estado) { this.estado = estado; }
-    public Utilizador getCriador() { return criador; }
-    public void setCriador(Utilizador criador) { this.criador = criador; }
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNumeroProcesso() {
+        return numeroProcesso;
+    }
+
+    public void setNumeroProcesso(String numeroProcesso) {
+        this.numeroProcesso = numeroProcesso;
+    }
+
+    public String getAssunto() {
+        return assunto;
+    }
+
+    public void setAssunto(String assunto) {
+        this.assunto = assunto;
+    }
+
+    public String getRemetente() {
+        return remetente;
+    }
+
+    public void setRemetente(String remetente) {
+        this.remetente = remetente;
+    }
+
+    public LocalDateTime getDataRegisto() {
+        return dataRegisto;
+    }
+
+    public void setDataRegisto(LocalDateTime dataRegisto) {
+        this.dataRegisto = dataRegisto;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public Utilizador getCriador() {
+        return criador;
+    }
+
+    public void setCriador(Utilizador criador) {
+        this.criador = criador;
+    }
 }

@@ -1,11 +1,11 @@
 package com.isced.expedientes.controller;
 
 import com.isced.expedientes.model.Expediente;
-import com.isced.expedientes.model.Utilizador;
 import com.isced.expedientes.model.Papel;
+import com.isced.expedientes.model.Utilizador;
 import com.isced.expedientes.repository.ExpedienteRepository;
-import com.isced.expedientes.repository.UtilizadorRepository;
 import com.isced.expedientes.repository.PapelRepository;
+import com.isced.expedientes.repository.UtilizadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api" )
+@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class ExpedienteController {
 
